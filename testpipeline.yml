@@ -5,7 +5,7 @@ resources:
   source:
     uri: https://github.com/p-manesh/testresult
     username: p_manesh@hotmail.com
-    password: Password252
+    password: 
     branch: master
 
 jobs:
