@@ -1,0 +1,24 @@
+---
+resources:
+- name: testresult
+  type: git
+  source:
+    uri: https://github.com/p-manesh/testresult
+    username: p_manesh@hotmail.com
+    password: Password252
+    branch: master
+
+jobs:
+- name: test
+  plan:
+  - get: testresult
+  - task: run-tests
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: busybox
+      run:
+        path: echo
+        args: [Test Case Passed or Failed]
